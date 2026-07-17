@@ -1,11 +1,8 @@
-interface User {
-  name: string;
-  age: number;
+import { log } from "@/utils";
+
+const elements: NodeListOf<HTMLElement> = document.querySelectorAll("*");
+for (const element of elements) {
+	element.style.setProperty("outline", "3px solid limegreen");
 }
 
-const user: User = {
-  name: "John",
-  age: 30,
-};
-
-console.log(`Hello ${user.name} you are ${user.age} years old`);
+log("Hello world!");
